@@ -1,0 +1,224 @@
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dropdown-btn {
+    padding: 8px 0px;
+    width: 180px;
+    font-size: medium;
+    border: none;
+    border-radius: 6px;
+}
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 5px 0;
+    width: 180px;
+}
+
+.email-display,
+.setting-btn,
+.logout-btn {
+    font-size: medium;
+    color: #000000;
+    border: none;
+    text-align: left;
+    padding: 5px 10px;
+}
+.themeBtn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark .app-container {
+    background-color: #21281f;
+    border: solid #465545 2px;
+}
+
+body.light .app-container {
+    background-color: #fefdfa;
+    border: solid #1b211a 2px;
+    border-bottom: solid #1b211a 5px;
+    border-right: solid #1b211a 5px;
+}
+
+body.dark .themeBtn {
+    background-color: transparent;
+    border: solid #494949 0.1pt;
+    padding: 0;
+}
+
+body.light .themeBtn {
+    background-color: transparent;
+    border: solid #afafaf 0.1pt;
+}
+
+body.dark .themeBtn img {
+    width: 18px;
+    height: 18px;
+}
+
+body.light .themeBtn img {
+    width: 18px;
+    height: 18px;
+}
+
+body.dark h1 {
+    color: #8bae66;
+}
+
+body.light h1 {
+    color: #628141;
+}
+
+body.dark .task-input input {
+    background-color: #21281f;
+    color: white;
+    border: solid white 0.1px;
+}
+
+body.light .task-input input {
+    background-color: #fefdfa;
+    color: #000000;
+    border: solid #1b211a 1px;
+}
+
+body.dark .add-task-btn {
+    background-color: #ece5d6;
+    color: black;
+    border: none;
+}
+
+body.light .add-task-btn {
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+}
+
+body.dark .add-task-btn:hover {
+    background-color: #bababa;
+}
+
+body.light .add-task-btn:hover {
+    background-color: #3a3a3a;
+}
+
+body.dark .task-list h3 {
+    color: #8bae66;
+}
+
+body.light .task-list h3 {
+    color: #628141;
+}
+
+body.dark .li {
+    background-color: #21281f;
+    border: solid #747474 0.5px;
+}
+
+body.light .li {
+    background-color: #f7f7f7;
+    border: solid #b2b2b2 0.5px;
+}
+
+body.dark .delete-btn {
+    background-color: #720c0c;
+    color: white;
+}
+
+body.light .delete-btn {
+    background-color: #720c0c;
+    color: white;
+}
+
+.app-container {
+    margin: 25px;
+    max-width: 600px;
+    min-width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.task-input {
+    margin-bottom: 40px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-input input {
+    padding: 10px 30px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.add-task-btn {
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.task-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.li {
+    border-radius: 5px;
+    padding: 8px;
+    width: 300px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list h3 {
+    text-align: center;
+}
+
+body .delete-btn {
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}

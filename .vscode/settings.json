@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/node_modules": true,
+        // "frontend/public": true,
+        "**/.git": true,
+        "**/.gitignore": true,
+        "frontend/*.json": true,
+        "backend/*.json": true,
+        "frontend/*.js": true,
+        "frontend/*.html": true,
+        "frontend/*.md": true
+    }
+}

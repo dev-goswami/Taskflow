@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import connectDB from "./db/db.js";
 import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js";
@@ -11,11 +12,15 @@ const PORT = process.env.PORT;
 connectDB();
 const app = express();
 
+//middlewares
+app.use(cors());
 app.use(express.json());
 
+//routes
 app.use("/api/users", userRoutes);
 app.use("/api/todos", todoRoutes);
 
+//error middleware
 app.use(errorHandler);
 
 app.get("/", (req, res) => {
