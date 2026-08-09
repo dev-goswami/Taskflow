@@ -17,7 +17,7 @@ function Register() {
         }
         try {
             const response = await fetch(
-                "http://localhost:5000/api/users/register",
+                `${import.meta.env.VITE_AUTH_URL}/register`,
                 {
                     method: "POST",
                     headers: {
