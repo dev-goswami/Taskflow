@@ -4,6 +4,25 @@ function getToken() {
     return localStorage.getItem("token");
 }
 
+async function handleResponse(response) {
+    const data = await response.json().catch(() => null);
+
+    if (response.status === 401) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+
+        window.location.href = "/login";
+
+        return;
+    }
+
+    if (!response.ok) {
+        throw new Error(data?.message || "Something went wrong");
+    }
+
+    return data;
+}
+
 // ---------- Functions ----------
 
 //get Todos
@@ -16,13 +35,7 @@ export async function getTodos() {
         },
     });
 
-    if (!response.ok) {
-        throw new Error("Something went wrong");
-    }
-
-    const data = await response.json();
-
-    return data;
+    return handleResponse(response);
 }
 
 //add task
@@ -40,9 +53,7 @@ export async function addTask(task) {
         }),
     });
 
-    if (!response.ok) {
-        throw new Error("Something went wrong");
-    }
+    return handleResponse(response);
 }
 
 // delete task
@@ -57,9 +68,7 @@ export async function deleteTask(id) {
         },
     });
 
-    if (!response.ok) {
-        throw new Error("Something went wrong");
-    }
+    handleResponse(response);
 }
 
 //toggleTask
@@ -77,7 +86,5 @@ export async function toggleTask(id, completed) {
         }),
     });
 
-    if (!response.ok) {
-        throw new Error("Something went wrong");
-    }
+    return handleResponse(response);
 }

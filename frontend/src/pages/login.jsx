@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/login.css";
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.body.className = "dark";
+    }, []);
 
     async function handleLogin(e) {
         e.preventDefault();
@@ -54,11 +57,17 @@ function Login() {
     }
 
     return (
-        <div className="login-container">
-            <form className="login-form" onSubmit={handleLogin}>
-                <h2>Welcome Back</h2>
+        <div className="flex min-h-screen items-center justify-center bg-background px-4 text-text">
+            <form
+                className="flex w-full max-w-[400px] flex-col gap-4 rounded-xl border border-border bg-surface p-6 sm:p-8"
+                onSubmit={handleLogin}
+            >
+                <h2 className="text-center text-2xl font-bold text-primary sm:text-3xl">
+                    Welcome Back
+                </h2>
 
                 <input
+                    className="w-full rounded-lg border border-border bg-background px-3 py-3 text-text outline-none placeholder:text-muted"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
@@ -66,18 +75,28 @@ function Login() {
                 />
 
                 <input
+                    className="w-full rounded-lg border border-border bg-background px-3 py-3 text-text outline-none placeholder:text-muted"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
                     placeholder="Password"
                 />
 
-                <button className="login-btn" type="submit">
+                <button
+                    className="w-full rounded-lg bg-primary px-4 py-3 font-medium text-background transition-colors duration-200 hover:bg-primary-hover"
+                    type="submit"
+                >
                     Login
                 </button>
 
-                <p className="auth-link">
-                    Don't have an account? <Link to="/register">Register</Link>
+                <p className="text-center text-sm text-muted">
+                    Don't have an account?{" "}
+                    <Link
+                        to="/register"
+                        className="font-medium text-primary hover:underline"
+                    >
+                        Register
+                    </Link>
                 </p>
             </form>
         </div>
