@@ -1,41 +1,51 @@
 # Taskflow
 
-A full-stack Todo application built with React, Node.js, Express, MongoDB, and JWT authentication.
+A full-stack task management application built with React, Node.js, Express, and MongoDB.
 
-Taskflow allows users to create an account, log in, and manage their personal tasks.
+## Features
 
-## 🚀 Features
-
-- User registration
-- User login
-- JWT authentication
+- User authentication
 - Create tasks
-- View tasks
-- Update task completion status
+- Mark tasks as completed
 - Delete tasks
-- User-specific tasks
-- Dark/light theme
-- User profile dropdown
-- Logout
-- API error handling
-- Protected API routes
+- Light and dark theme
+- Responsive design
+- REST API
+- MongoDB persistence
 
-## 🛠️ Tech Stack
-
-### Frontend
+## Tech Stack
 
 - React
 - React Router
-- JavaScript
-- CSS
-- Fetch API
-
-### Backend
-
+- Tailwind CSS
+- Motion
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
 - JWT
-- dotenv
-- CORS
+
+## Screenshot
+
+## Screenshots
+
+![Home](./screenshots/Home.png)
+
+![Login](./screenshots/login.png)
+
+![Register](./screenshots/register.png)
+
+## Live Demo
+
+[View Taskflow Live](https://taskflow-production-45e7.up.railway.app/login)
+
+## What I Learned
+
+- Building a full-stack React application
+- Creating and consuming REST APIs
+- MongoDB and Mongoose
+- JWT authentication
+- React state management
+- Light and dark theme implementation
+- Responsive design with Tailwind CSS
+- Deploying a full-stack application
